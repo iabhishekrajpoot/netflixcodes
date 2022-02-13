@@ -13,15 +13,12 @@ const GenrePage = (props) => {
     return (
         <>
             {codelist
-                .filter((data) => {
-                data.genre.toLowerCase().includes(props.keyword.replace(/-/g, " ").toLowerCase())
-                        return data
-                    
-                })
+                .filter(data =>
+                data.genre.toLowerCase().includes(props.keyword.replace(/-/g, " ").toLowerCase()))
                 .map((data, key) => {
                     return (<div key={key}>
-                        <h2>genre: {data.genre}</h2>
-                        <h3>code: {data.code}</h3></div>)
+                        <strong>genre: {data.genre}</strong>
+                        <div>code: {data.code}</div></div>)
                 })}
         </>
     )
@@ -30,16 +27,16 @@ const GenrePage = (props) => {
 const RelatedGenre = (props) => {
     const fData = codelist.filter(data => data.genre.toLowerCase() === props.keyword.replace(/-/g, " "))[0].type
     return (<>
-        <h3>Related keywords:  {
+        <h3>Related keywords:</h3>  {
             codelist
             .filter(data => data.type === fData)
             .map((data, key) => {
                 return (<div key={key}>
-                    <span> {data.genre}</span>
-                    <p>code: {data.code}</p>
+                    <strong> {data.genre}</strong>
+                    <div>code: {data.code}</div>
                 </div>)
             })
-        } </h3>
+        } 
     </>)
 }
 
@@ -48,18 +45,18 @@ const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
     return (<>
         <input type="text" placeholder="search.." onChange={(e) => { setSearchTerm(e.target.value) }} />
-        {codelist
+     <h1>codes list:</h1>   {codelist
             .filter(array => array.genre.toLowerCase().includes(searchTerm.toLowerCase())) 
             .map((array, key) => {
                 if (searchTerm === "") {
                     return (<div key={key}>
-                        <h2>genre: {array.genre}</h2>
-                        <h3>code: {array.code}</h3></div>)
+                        <strong>genre: {array.genre}</strong>
+                        <div>code: {array.code}</div></div>)
                 }
                 else {
                     return (<div key={key}>
-                        <h2>genre: {array.genre}</h2>
-                        <h3><a href={array.genre.replace(/ /g, "-").toLowerCase()}>view code</a></h3></div>)
+                        <strong>genre: {array.genre}</strong>
+                        <p><a href={array.genre.replace(/ /g, "-").toLowerCase()}>view code</a></p></div>)
                 }
             })}
     </>)
