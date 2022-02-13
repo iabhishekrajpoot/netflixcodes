@@ -14,9 +14,9 @@ const GenrePage = (props) => {
         <>
             {codelist
                 .filter((data) => {
-                    if (data.genre.toLowerCase().includes(props.keyword.replace(/-/g, " ").toLowerCase())) {
+                data.genre.toLowerCase().includes(props.keyword.replace(/-/g, " ").toLowerCase())
                         return data
-                    }
+                    
                 })
                 .map((data, key) => {
                     return (<div key={key}>
@@ -31,12 +31,9 @@ const RelatedGenre = (props) => {
     const fData = codelist.filter(data => data.genre.toLowerCase() === props.keyword.replace(/-/g, " "))[0].type
     return (<>
         <h3>Related keywords:  {
-            codelist.filter((data) => {
-                if (data.type === fData) {
-                    return data
-                }
-            }
-            ).map((data, key) => {
+            codelist
+            .filter(data => data.type === fData)
+            .map((data, key) => {
                 return (<div key={key}>
                     <span> {data.genre}</span>
                     <p>code: {data.code}</p>
@@ -52,13 +49,7 @@ const Search = () => {
     return (<>
         <input type="text" placeholder="search.." onChange={(e) => { setSearchTerm(e.target.value) }} />
         {codelist
-            .filter((array) => {
-                if (searchTerm === "") {
-                    return array
-                } else if (array.genre.toLowerCase().includes(searchTerm.toLowerCase())) {
-                    return array
-                }
-            })
+            .filter(array => array.genre.toLowerCase().includes(searchTerm.toLowerCase())) 
             .map((array, key) => {
                 if (searchTerm === "") {
                     return (<div key={key}>
