@@ -1,23 +1,110 @@
 body {
-  margin: 0 10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  margin: 0;
+  background: rgb(243, 243, 243);
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+.main_area{
+  margin: 0 10px;
+  max-width: 800px
+}
+.header{
+  padding: 12px 10px;
+  font-size: 1.2em;
+  margin-block-end: 0.67em;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(197, 197, 197);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.search_div{
+  width:300px
 }
+.search_bar{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-block-start: 0.67em;
+    background-color: rgb(218, 218, 218);
+    border-radius: 6px;
+    font-family: inherit;
+    outline: none;
+    border: 1px solid transparent;
+}
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 0.8rem;
+}
+
+.card {
+  font-size: 0.9rem;
+  padding: 0.5em;
+  border: 2px solid rgb(223, 219, 219);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card_div_right{
+  float: right;
+  width: 30%
+}
+.card_slash{
+margin-right: 10px;
+color: rgb(223, 223, 223);
+}
+.gpage_code_block{
+  /* width:100%; */
+  margin-block-start: 0.67em;
+  padding: 10px 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.gpage_code_block_div{
+  font-size: 1.3rem;
+}
+.gpage_code_block_ddiv{
+  font-size: 1.8rem;
+}
+.gpage_code_block_span{
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+}
+
+
+
+h1{
+  color: rgb(14, 14, 14);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.h1_gpage{
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: left;
+}
+.h1_gpage_div{
+ font-size: 0.9rem;
+ font-weight: 300;
+ color: rgb(56, 56, 56);
+}
+
+h2{
+  font-size: 1rem;
+  font-weight: 400;
+  margin-block-start: 2em;
+}
+
+
 h3 {
   color: brown;
 }
-h1{
-  color:blueviolet
-}
-input{
-  padding: 6px 10px;
-  margin: 30px;
+
+a{
+  text-decoration: none;
 }

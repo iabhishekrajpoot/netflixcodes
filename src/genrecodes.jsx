@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import NavBar from "./components/navbar";
 
 const codelist = [
   { genre: "Adventures", code: "7442", type: "Adventures" },
@@ -26,11 +27,15 @@ function GenrePage({ keyword }) {
   return (
     <div>
       {Object.keys(data).length === 0 ? (
-        <h1>404 Not Found</h1>
+        <div>404 Not Found</div>
       ) : (
         <>
-          <strong>{data.genre}</strong>
-          <div>code: {data.code}</div>
+  
+        <div className="gpage_code_block">
+          <div className="gpage_code_block_div">{data.genre}</div>
+          <div className="gpage_code_block_ddiv"><span className="gpage_code_block_span" >code:</span> {data.code}</div>
+          </div>
+        
         </>
       )}
     </div>
@@ -50,14 +55,19 @@ function RelatedGenre(props) {
 
   return (
     <>
-      <h3>Related keywords:</h3>{" "}
       {codelist
-        .filter((data) => data.type === fData)
-        .map((data, key) => {
+        .filter((Related) => Related.type === fData)
+        .map((Related, key) => {
           return (
-            <div key={key}>
-              <strong> {data.genre}</strong>
-              <div>code: {data.code}</div>
+            <div className="card" key={key}>
+              <span>{Related.genre} </span>
+              <div className="card_div_right">
+                <span className="card_slash">|</span>
+                <Link to={Related.genre.replace(/ /g, "-").toLowerCase()} >
+                  view code
+                </Link>
+              </div>
+
             </div>
           );
         })}
@@ -69,39 +79,51 @@ function Search() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <>
-      <input
-        type="text"
-        placeholder="search.."
-        onChange={(e) => {
-          setSearchTerm(e.target.value);
-        }}
-      />
-      <h1>codes list:</h1>{" "}
-      {codelist
-        .filter((array) =>
-          array.genre.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-        .map((array, key) => {
-          if (searchTerm === "") {
-            return (
-              <div key={key}>
-                <strong>genre: {array.genre}</strong>
-                <div>code: {array.code}</div>
-              </div>
-            );
-          } else {
-            return (
-              <div key={key}>
-                <strong>genre: {array.genre}</strong>
-                <p>
-                  <Link to={array.genre.replace(/ /g, "-").toLowerCase()}>
-                    view code
-                  </Link>
-                </p>
-              </div>
-            );
-          }
-        })}
+      <NavBar />
+      <div className="main_area">
+        <div className="search_div">
+          <h1>Netflix Genre Codes</h1>
+          <input
+            className="search_bar"
+            type="text"
+            placeholder="Search Genre code ..."
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+            }}
+          />
+        </div>
+        <h2>Codes list:</h2>{" "}
+
+        <div className="card_container" >
+          {codelist
+            .filter((array) =>
+              array.genre.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .map((array, key) => {
+              if (searchTerm === "") {
+                return (
+                  <div className="card" key={key}>
+                    <span>{array.genre} </span> <div className="card_div_right">
+                      <span className="card_slash">|</span> {array.code}</div>
+                  </div>
+
+                );
+              } else {
+                return (
+                  <div className="card" key={key}>
+                    <span>{array.genre} </span>
+                    <div className="card_div_right">
+                      <span className="card_slash">|</span>
+                      <Link to={array.genre.replace(/ /g, "-").toLowerCase()}>
+                        view code
+                      </Link>
+                    </div>
+
+                  </div>
+                );
+              }
+            })}
+        </div>        </div>
     </>
   );
 }
