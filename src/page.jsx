@@ -10,6 +10,8 @@ function CodePage() {
     document.title = `${getparams} - NetFlixCode`;
   }, [getparams]);
 
+
+
   return (
     <>
     <NavBar/>

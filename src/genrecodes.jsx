@@ -8,7 +8,7 @@ const codelist = [
   { genre: "Hijacking movies", code: "20541", type: "Adventures" },
   { genre: "Action thrillers", code: "43048", type: "action" },
   { genre: "Asian action movies", code: "77232", type: "Adventures" },
-  { genre: "Westerns", code: "7700", type: "action" },
+  { genre: "Western", code: "7700", type: "action" },
 ];
 
 function GenrePage({ keyword }) {
@@ -63,9 +63,9 @@ function RelatedGenre(props) {
               <span>{Related.genre} </span>
               <div className="card_div_right">
                 <span className="card_slash">|</span>
-                <Link to={Related.genre.replace(/ /g, "-").toLowerCase()} >
+                <a href={"/" + Related.genre.replace(/ /g, "-").toLowerCase()} >
                   view code
-                </Link>
+                </a>
               </div>
 
             </div>
@@ -80,9 +80,10 @@ function Search() {
   return (
     <>
       <NavBar />
+      <div className="main">
       <div className="main_area">
+      <h1>Netflix Genre Codes</h1>
         <div className="search_div">
-          <h1>Netflix Genre Codes</h1>
           <input
             className="search_bar"
             type="text"
@@ -114,7 +115,7 @@ function Search() {
                     <span>{array.genre} </span>
                     <div className="card_div_right">
                       <span className="card_slash">|</span>
-                      <Link to={array.genre.replace(/ /g, "-").toLowerCase()}>
+                      <Link to={"/" + array.genre.replace(/ /g, "-").toLowerCase()}>
                         view code
                       </Link>
                     </div>
@@ -123,7 +124,7 @@ function Search() {
                 );
               }
             })}
-        </div>        </div>
+        </div>        </div></div>
     </>
   );
 }

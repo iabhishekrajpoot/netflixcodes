@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 function NavBar() {
     return(<>
 <header>
-    <div className="header">Netflix Codes</div>
+    <div className="header"><Link to="/">Netflix Codes</Link></div>
 </header>
     </>)
 };
