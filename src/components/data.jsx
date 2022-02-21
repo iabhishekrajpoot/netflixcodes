@@ -51,8 +51,28 @@ const DataList = [
     { genre: "LGBTQ", code: "5977", type: "LGBTQ" },
     { genre: "Gay & Lesbian Comedies", code: "7120", type: "LGBTQ" },
     { genre: "Gay & Lesbian Documentaries", code: "4720", type: "LGBTQ" },
-   
-
+    
+    { genre: "Independent movies", code: "7077", type: "Independent movies" },
+    { genre: "Romantic independent movies", code: "9916", type: "Independent movies" },
+    { genre: "Independent thrillers", code: "3269", type: "Independent movies" },
+    { genre: "Independent dramas", code: "384", type: "Independent movies" },
+    { genre: "Independent comedies", code: "4195", type: "Independent movies" },
+    { genre: "Independent action & adventure", code: "11804", type: "Independent movies" },
+    { genre: "Experimental movies", code: "11079", type: "Independent movies" },
+ 
+    { genre: "Horror movies", code: "8711", type: "Horror movies" },
+    { genre: "Zombie horror movies", code: "75405", type: "Horror movies" },
+    { genre: "Werewolf horror movies", code: "75930", type: "Horror movies" },
+    { genre: "Vampire horror movies", code: "75804", type: "Horror movies" },
+    { genre: "Teen screams", code: "52147", type: "Horror movies" },
+    { genre: "Supernatural horror movies", code: "42023", type: "Horror movies" },
+    { genre: "Slasher and serial killer movies", code: "8646", type: "Horror movies" },
+    { genre: "Satanic stories", code: "6998", type: "Horror movies" },
+    { genre: "Monster movies", code: "947", type: "Horror movies" },
+    { genre: "Horror comedy", code: "89585", type: "Horror movies" },
+    { genre: "Foreign horror movies", code: "8654", type: "Horror movies" },
+    { genre: "Deep sea horror movies", code: "45028", type: "Horror movies" },
+    { genre: "Cult horror movies", code: "10944", type: "Horror movies" },
 
   ];
 
