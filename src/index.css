@@ -74,6 +74,13 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.card_title {
+float: left;
+width: 70%;
+height: 1.2rem;
+overflow: hidden; 
+ text-overflow: ellipsis;
+}
 
 .card_div_right{
   float: right;
@@ -138,3 +145,5 @@ h3 {
 a{
   text-decoration: none;
 }
+
+

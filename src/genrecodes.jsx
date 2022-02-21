@@ -97,7 +97,7 @@ function Search() {
               if (searchTerm === "") {
                 return (
                   <div className="card" key={key}>
-                    <span>{array.genre} </span> <div className="card_div_right">
+                    <span className="card_title">{array.genre} </span> <div className="card_div_right">
                       <span className="card_slash">|</span> {array.code}</div>
                   </div>
 
