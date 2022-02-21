@@ -77,9 +77,9 @@ body {
 .card_title {
 float: left;
 width: 70%;
-height: 1.2rem;
+/* height: 1.2rem;
 overflow: hidden; 
- text-overflow: ellipsis;
+ text-overflow: ellipsis; */
 }
 
 .card_div_right{
