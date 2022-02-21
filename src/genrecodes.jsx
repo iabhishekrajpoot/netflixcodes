@@ -52,7 +52,7 @@ function RelatedGenre(props) {
         .map((Related, key) => {
           return (
             <div className="card" key={key}>
-              <span>{Related.genre} </span>
+              <span className="card_title">{Related.genre} </span>
               <div className="card_div_right">
                 <span className="card_slash">|</span>
                 <a href={"/" + Related.genre.replace(/ /g, "-").toLowerCase()} >
@@ -105,7 +105,7 @@ function Search() {
               } else {
                 return (
                   <div className="card" key={key}>
-                    <span>{array.genre} </span>
+                    <span className="card_title">{array.genre} </span>
                     <div className="card_div_right">
                       <span className="card_slash">|</span>
                       <Link to={"/" + array.genre.replace(/ /g, "-").toLowerCase()}>
