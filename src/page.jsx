@@ -15,6 +15,7 @@ function CodePage() {
   return (
     <>
     <NavBar/>
+    <div className="main">
     <div className="main_area">
       
       <h1 className="h1_gpage"><span className="h1_gpage_div">Genre Code for </span> {getparams.replace(/-/g, " ")}</h1>
@@ -23,6 +24,7 @@ function CodePage() {
       <h2>Related Genere Codes:</h2>
       <div className="card_container" >
       <RelatedGenre keyword={getparams} />
+      </div>
       </div>
       </div>
     </>

@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "./components/navbar";
-
-const codelist = [
-  { genre: "Adventures", code: "7442", type: "Adventures" },
-  { genre: "Westerns", code: "7700", type: "Adventures" },
-  { genre: "Hijacking movies", code: "20541", type: "Adventures" },
-  { genre: "Action thrillers", code: "43048", type: "action" },
-  { genre: "Asian action movies", code: "77232", type: "Adventures" },
-  { genre: "Western", code: "7700", type: "action" },
-];
+import DataList from "./components/data";
 
 function GenrePage({ keyword }) {
   const [data] = useState(() => {
     let a = {};
-    codelist.forEach((d) => {
+    DataList.forEach((d) => {
       if (
         d.genre.toLowerCase() === keyword.replaceAll("-", " ").toLowerCase()
       ) {
@@ -43,7 +35,7 @@ function GenrePage({ keyword }) {
 }
 
 function RelatedGenre(props) {
-  let fData = codelist.filter(
+  let fData = DataList.filter(
     (data) => data.genre.toLowerCase() === props.keyword.replace(/-/g, " ")
   );
 
@@ -55,7 +47,7 @@ function RelatedGenre(props) {
 
   return (
     <>
-      {codelist
+      {DataList
         .filter((Related) => Related.type === fData)
         .map((Related, key) => {
           return (
@@ -84,6 +76,7 @@ function Search() {
       <div className="main_area">
       <h1>Netflix Genre Codes</h1>
         <div className="search_div">
+          <svg className="svg-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
           <input
             className="search_bar"
             type="text"
@@ -93,10 +86,10 @@ function Search() {
             }}
           />
         </div>
-        <h2>Codes list:</h2>{" "}
+        <h2>Code List:</h2>{" "}
 
         <div className="card_container" >
-          {codelist
+          {DataList
             .filter((array) =>
               array.genre.toLowerCase().includes(searchTerm.toLowerCase())
             )
@@ -129,4 +122,4 @@ function Search() {
   );
 }
 
-export { Search, GenrePage, RelatedGenre, codelist };
+export { Search, GenrePage, RelatedGenre};
