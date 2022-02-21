@@ -36,7 +36,7 @@ function GenrePage({ keyword }) {
 
 function RelatedGenre(props) {
   let fData = DataList.filter(
-    (data) => data.genre.toLowerCase() === props.keyword.replace(/-/g, " ")
+    (data) => data.genre.replaceAll("-", " ").toLowerCase() === props.keyword.replace(/-/g, " ")
   );
 
   if (fData.length === 0) {
