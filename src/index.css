@@ -28,7 +28,7 @@ body {
 }
 .c_head{
   float:right;
-  padding:2px 5px;
+  padding:3px 5px;
   border: 1px solid red;
   border-radius: 5px;
   font-weight: 200;
