@@ -74,7 +74,7 @@ function Search() {
       <NavBar />
       <div className="main">
       <div className="main_area">
-      <h1>Netflix Genre Codes</h1>
+      <h1><span className="red">Net</span>flix Genre Codes</h1>
         <div className="search_div">
           <svg className="svg-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
           <input
