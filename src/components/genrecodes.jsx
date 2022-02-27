@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import NavBar from "./components/navbar";
-import DataList from "./components/data";
+import DataList from "./data";
 
 function GenrePage({ keyword }) {
   const [data] = useState(() => {
@@ -27,7 +26,6 @@ function GenrePage({ keyword }) {
           <div className="gpage_code_block_div">{data.genre}</div>
           <div className="gpage_code_block_ddiv"><span className="gpage_code_block_span" >code:</span> {data.code}</div>
           </div>
-        
         </>
       )}
     </div>
@@ -71,10 +69,6 @@ function Search() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <>
-      <NavBar />
-      <div className="main">
-      <div className="main_area">
-      <h1><span className="red">Net</span>flix Genre Codes</h1>
         <div className="search_div">
           <svg className="svg-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
           <input
@@ -86,7 +80,7 @@ function Search() {
             }}
           />
         </div>
-        <h2>Code List:</h2>{" "}
+        <h2 className="label">Code List:</h2>{" "}
 
         <div className="card_container" >
           {DataList
@@ -117,7 +111,7 @@ function Search() {
                 );
               }
             })}
-        </div>        </div></div>
+        </div>
     </>
   );
 }

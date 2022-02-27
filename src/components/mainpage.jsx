@@ -1,0 +1,38 @@
+// import React, { useEffect } from "react";
+// import { useParams } from "react-router-dom";
+import { Search } from "./genrecodes";
+import NavBar from "./navbar";
+
+function MainPage() {
+    // const { getparams } = useParams();
+
+    // useEffect(() => {
+    //     document.title = `${getparams} - NetFlixCode`;
+    // }, [getparams]);
+
+    return (
+        <>
+            <NavBar />
+            <div className="main">
+                <div className="main_area">
+                    <h1><span className="red">Net</span>flix Genre Codes</h1>
+                    <Search />
+
+                    <div className="how-to">
+                        <h2>How To Use?</h2>
+                        <div></div>
+                        <p><strong>flixcodes </strong> is built to make downloading FB videos a breeze.</p>
+                        <p>Here are the steps involved:</p>
+                        <p><strong>Step #1:</strong> Enter the URL or link of the Facebook video that you wish to download.</p>
+                        <p><strong>Step #2:</strong> Click on the submit button to start the conversion process.</p>
+                        <p><strong>Step #3:</strong> Click on the submit button to start</p>
+                        <p><strong>Step #4:</strong> Click on the conversion process.</p>
+                    </div>
+
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default MainPage;

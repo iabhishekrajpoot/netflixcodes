@@ -1,5 +1,5 @@
 body {
-  margin: 0 ;
+  margin: 0 0 20rem 0;
   background: rgb(251, 251, 255);
   font-family: -apple-system, BlinkMacSystemFont, 'DM Sans', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -29,7 +29,7 @@ body {
 .c_head{
   float:right;
   padding:3px 5px;
-  border: 1px solid red;
+  border: 1px solid #de0913;
   border-radius: 5px;
   font-weight: 200;
   font-size: .8rem;
@@ -52,7 +52,7 @@ body {
  border-radius: 5px;
  color: rgb(39, 39, 39);
  background-color: #ffffff;
- box-shadow: 5px 5px 20px #e7e7e7;
+ box-shadow: 5px 5px 30px #e7e7e7;
  transition: 400ms;
 }
 .search_div:hover{
@@ -88,12 +88,10 @@ body {
 float: left;
 width: 70%;
 font-family: DM Sans;
-/* height: 1.2rem;
-overflow: hidden; 
- text-overflow: ellipsis; */
 }
 
 .card_div_right{
+  color: #de0913;
   float: right;
   width: 30%
 }
@@ -109,17 +107,22 @@ overflow: hidden;
   padding: 10px 10px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
+  box-shadow: 5px 5px 10px #eeeeee;
+  border: 1px solid rgb(177, 177, 177)
 }
 .gpage_code_block_div{
   font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 22px;
 }
 .gpage_code_block_ddiv{
   font-size: 1.8rem;
+  margin-block-start: 0.3rem;
 }
 .gpage_code_block_span{
   font-size: 0.9rem;
   font-weight: 300;
-  color: rgb(0, 0, 0);
+  color: rgb(112, 112, 112);
 }
 
 
@@ -132,26 +135,50 @@ h1{
   letter-spacing: .5px;
 }
 .h1_gpage{
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   font-weight: 300;
   text-align: left;
-  letter-spacing: -.5px;
-  color: #222222;
-}
-.h1_gpage_div{
- font-size: 0.9rem;
- font-weight: 300;
- color: rgb(95, 95, 95);
- letter-spacing: 0;
+  white-space: nowrap; 
+  letter-spacing: 0;
+  width: 100%; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:#252525;
 }
 
-h2{
+.label{
   font-size: 1rem;
   font-weight: 400;
-  color: #a3a3a3;
+  color: #616161;
   margin-block-start: 2em;
 }
 
+.how-to{
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 3px solid #d8252e;
+  border-radius: 5px;
+  padding: .5rem 10px;
+  margin:3rem 5px 5px 5px;
+  box-shadow: 5px 5px 20px #ececec;
+}
+.how-to h2{
+  font-size: 1.8rem;
+  margin: .5rem;
+}
+.how-to p {
+  text-align: left;
+}
+.how-to p:first-of-type{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.how-to div{
+  border: 2px solid rgb(245, 128, 128);
+  border-radius: 10px;
+  width: 20%;
+  margin: 0 auto;
+}
 
 h3 {
   color: brown;
