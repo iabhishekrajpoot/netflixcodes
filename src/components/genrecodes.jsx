@@ -7,7 +7,7 @@ function GenrePage({ keyword }) {
     let a = {};
     DataList.forEach((d) => {
       if (
-        d.genre.toLowerCase() === keyword.replaceAll("-", " ").toLowerCase()
+        d.genre.replaceAll("-", " ").toLowerCase() === keyword.replaceAll("-", " ").toLowerCase()
       ) {
         a = d;
       }
