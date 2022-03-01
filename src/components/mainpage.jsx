@@ -28,7 +28,9 @@ function MainPage() {
                         <p><strong>Step #3:</strong> Click on the submit button to start</p>
                         <p><strong>Step #4:</strong> Click on the conversion process.</p>
                     </div>
-
+                    <div>
+                     <p>Findflixcodes.com is an online website which helps you to find netflix hidden genre codes. We had build our website in a efficient where users can search through netflix codes easily and find hidden genre codes hassle free, also users can navigate to that genre page using the Open on Netflix feature.</p>
+                    </div>
                 </div>
             </div>
         </>
