@@ -24,7 +24,7 @@ function GenrePage({ keyword }) {
   
         <div className="gpage_code_block">
           <div className="gpage_code_block_div">{data.genre}</div>
-          <div className="gpage_code_block_ddiv"><span className="gpage_code_block_span" >code:</span> {data.code}<a href={"https://netflix.com/browse/genre/" + data.code}>Open on NetFlix</a></div>
+          <div className="gpage_code_block_ddiv"><span className="gpage_code_block_span" >code:</span> {data.code} <span className="gpage_code_block_span"><a href={"https://netflix.com/browse/genre/" + data.code}>Open on NetFlix</a></span></div>
           </div>
         </>
       )}
