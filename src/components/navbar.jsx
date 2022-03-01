@@ -5,7 +5,7 @@ import React from "react";
 function NavBar() {
     return(<>
 <header>
-    <div className="header">FlixCodes<span className="red">.com</span>
+    <div className="header">FindFlixCodes<span className="red">.com</span>
     <div className="c_head">How To Use?</div>
     </div>
 </header>
