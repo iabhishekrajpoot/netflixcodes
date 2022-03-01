@@ -21,7 +21,7 @@ function MainPage() {
                     <div className="how-to">
                         <h2>How To Use?</h2>
                         <div></div>
-                        <p><strong>flixcodes </strong> is built to make downloading FB videos a breeze.</p>
+                        <p><strong>Findflixcodes </strong> is built to search & find Netflix genere codes or hidden category codes.</p>
                         <p>Here are the steps involved:</p>
                         <p><strong>Step #1:</strong> Enter the URL or link of the Facebook video that you wish to download.</p>
                         <p><strong>Step #2:</strong> Click on the submit button to start the conversion process.</p>
