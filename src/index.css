@@ -1,5 +1,5 @@
 body {
-  margin: 0 0 20rem 0;
+  margin: 0;
   background: rgb(251, 251, 255);
   font-family: -apple-system, BlinkMacSystemFont, 'DM Sans', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -124,7 +124,47 @@ font-family: DM Sans;
   font-weight: 300;
   color: rgb(112, 112, 112);
 }
+.gpage_code_block_span svg:first-of-type{
+  stroke: #de0913;
+  width: 12px;
+}
 
+
+.how-to{
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 3px solid #d8252e;
+  border-radius: 5px;
+  padding: .5rem 10px;
+  margin:3rem 5px;
+  box-shadow: 5px 5px 20px #ececec;
+}
+.how-to h2{
+  font-size: 1.8rem;
+  margin: .5rem;
+}
+.how-to p {
+  text-align: left;
+}
+.how-to p:first-of-type{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.how-to div{
+  border: 2px solid #cc3d44;
+  border-radius: 10px;
+  width: 20%;
+  margin: 0 auto;
+}
+.content_area{
+  font-size: 15px;
+  line-height: 24px;
+  color: #616161;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 5px 5px 20px #ececec;
+  /* border-radius:10px; */
+}
 
 
 h1{
@@ -152,36 +192,11 @@ h1{
   color: #616161;
   margin-block-start: 2em;
 }
-
-.how-to{
-  text-align: center;
-  background-color: #ffffff;
-  border-top: 3px solid #d8252e;
-  border-radius: 5px;
-  padding: .5rem 10px;
-  margin:3rem 5px 5px 5px;
-  box-shadow: 5px 5px 20px #ececec;
+h2{
+  color: #0e0e0e;
 }
-.how-to h2{
-  font-size: 1.8rem;
-  margin: .5rem;
-}
-.how-to p {
-  text-align: left;
-}
-.how-to p:first-of-type{
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.how-to div{
-  border: 2px solid rgb(245, 128, 128);
-  border-radius: 10px;
-  width: 20%;
-  margin: 0 auto;
-}
-
 h3 {
-  color: brown;
+  color: #0e0e0e;
 }
 
 a{
@@ -192,4 +207,30 @@ a{
 .red{
  color: #de0913;
 }
+.name{
+  color: #000000;
+  font-size: larger;
+  font-weight: bold;
+}
 
+.footer{
+  text-align: center;
+  border-top: 2px solid #dddddd;
+  background-color: white;
+  padding: 5px 0 20px 0;
+}
+.footer div:first-of-type{
+  font-size: 1.6rem;
+  margin:15px
+}
+.footer p:first-of-type{
+  margin:0;
+  font-size: .7rem;
+}
+.footer svg:first-of-type{
+  stroke: #de0913;
+  fill: #de0913;
+  width:18px;
+  position: relative;
+  top: 4px;
+}

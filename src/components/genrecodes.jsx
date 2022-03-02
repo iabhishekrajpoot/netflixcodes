@@ -24,7 +24,14 @@ function GenrePage({ keyword }) {
   
         <div className="gpage_code_block">
           <div className="gpage_code_block_div">{data.genre}</div>
-          <div className="gpage_code_block_ddiv"><span className="gpage_code_block_span" >code:</span> {data.code} <span className="gpage_code_block_span"><a href={"https://netflix.com/browse/genre/" + data.code}>Open on NetFlix</a></span></div>
+          <div className="gpage_code_block_ddiv"><span className="gpage_code_block_span" >code:</span> {data.code} <span className="gpage_code_block_span"><a href={"https://netflix.com/browse/genre/" + data.code}>Open on NetFlix <svg xmlns='http://www.w3.org/2000/svg'
+     stroke-width='10' stroke-dashoffset='0'
+     stroke-dasharray='0' stroke-linecap='round'
+     stroke-linejoin='round' viewBox='0 0 100 100'>
+  <polyline fill="none" points="40 20 20 20 20 90 80 90 80 60"/>
+  <polyline fill="none" points="60 10 90 10 90 40"/>
+  <line fill="none" x1="89" y1="11" x2="50" y2="50" />
+</svg></a></span></div>
           </div>
         </>
       )}
