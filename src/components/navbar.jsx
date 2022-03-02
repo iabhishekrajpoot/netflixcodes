@@ -9,6 +9,7 @@ function NavBar() {
     <div className="c_head">How To Use?</div>
     </div>
 </section>
+
     </>)
 };
 
