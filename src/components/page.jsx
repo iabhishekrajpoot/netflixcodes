@@ -3,13 +3,21 @@ import { useParams } from "react-router-dom";
 import { GenrePage, RelatedGenre } from "./genrecodes";
 import NavBar from "./navbar";
 
-function CodePage() {
-  const { getparams } = useParams();
 
+
+
+function CodePage() {
+  // ScrollToTop
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+ 
+  //title-change
+  const { getparams } = useParams();
   useEffect(() => {
     document.title = `${getparams} - NetFlixCode`;
   }, [getparams]);
-
+  
   return (
     <>
       <NavBar />

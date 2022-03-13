@@ -128,7 +128,12 @@ font-family: DM Sans;
   stroke: #de0913;
   width: 12px;
 }
+.discription{ 
+  font-size: small;
+  line-height: 18px;
 
+
+}
 
 .how-to{
   text-align: center;
@@ -203,7 +208,9 @@ a{
   color:#de0913;
   text-decoration: none;
 }
-
+.linkto{
+   border-bottom: 1px solid #d8252e;
+}
 .red{
  color: #de0913;
 }
