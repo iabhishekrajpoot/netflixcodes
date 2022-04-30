@@ -101,8 +101,8 @@ function Search() {
                 <div className="card" key={key}>
                   <span className="card_title">{array.genre} </span>
                   <div className="card_div_right">
-                    <span className="card_slash">|</span> 
-                   <Link className="linkto" to={"/" + array.genre.replace(/ /g, "-").toLowerCase()}>{array.code}</Link>
+                    <span className="card_slash">|</span>
+                    <Link className="linkto" to={"/" + array.genre.replace(/ /g, "-").toLowerCase()}>{array.code}</Link>
                   </div>
                 </div>
 

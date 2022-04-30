@@ -26,10 +26,16 @@ body {
  box-shadow: 3px 3px 15px #ebebeb;
   /* border-bottom: 1px solid rgb(197, 197, 197); */
 }
+.logo{
+  color: #000000;
+  display: inline;
+}
+
 .c_head{
   float:right;
   padding:3px 5px;
   border: 1px solid #de0913;
+  color: #000000;
   border-radius: 5px;
   font-weight: 200;
   font-size: .8rem;
