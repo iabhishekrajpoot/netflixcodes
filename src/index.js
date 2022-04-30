@@ -7,7 +7,7 @@ import './index.css';
 
 
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <>
 <BrowserRouter>
   <App/>
